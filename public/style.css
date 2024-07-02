@@ -1,0 +1,174 @@
+
+
+
+/* Styles pour le nom d'utilisateur dans les messages */
+.message .name {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.message.my-message .name {
+    color: #005dd7; /* Couleur pour le nom d'utilisateur de l'utilisateur actuel */
+} 
+
+.message.other-message .name {
+    color: #0b7ae2; /* Couleur pour le nom d'utilisateur des autres utilisateurs */
+}
+
+/* Supprimez les styles de fond existants */
+.my-message > div,
+.other-message > div {
+    background: none;
+}
+
+/* Styles existants pour l'interface de l'application */
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body {
+    font-family: "Roboto", sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+.app {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    max-width: 600px;
+    background: #fff;
+    border-left: 1px solid #eee;
+    border-right: 1px solid #eee;
+}
+.app > .screen {
+    display: none;
+}
+.app > .screen.active {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.screen .form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 400px;
+}
+.screen .form-input {
+    width: 100%;
+    margin: 20px 0px;
+}
+.screen h2 {
+    margin-bottom: 20px;
+    font-size: 30px;
+    color: #111;
+    border-bottom: 4px solid #555;
+    padding: 5px 0px;
+    display: inline-block;
+}
+.screen .form-input label {
+    display: block;
+    margin-bottom: 5px;
+}
+.screen .form-input input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #555;
+    font-size: 15px;
+}
+.screen .form-input button {
+    padding: 10px 20px;
+    background: #111;
+    color: #fff;
+    cursor: pointer;
+    outline: none;
+    border: none;
+}
+.chat-screen .header {
+    background: #111;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px;
+}
+.chat-screen .header .logo {
+    font-size: 18px;
+    color: #f6f6f6;
+    font-weight: 600;
+}
+.chat-screen .header button {
+    padding: 5px 10px;
+    border: 1px solid #eee;
+    background: transparent;
+    color: #eee;
+    font-size: 15px;
+    cursor: pointer;
+    outline: none;
+}
+.chat-screen .messages {
+    width: 100%;
+    height: calc(100% - 100px);
+    background: #b0b0b0;
+    overflow: auto;
+}
+.chat-screen .messages .message {
+    display: flex;
+    padding: 10px;
+}
+.chat-screen .messages .message > div {
+    max-width: 80%;
+}
+.chat-screen .messages .my-message > div {
+    margin-left: auto;
+    background: #04f91d;
+    padding: 10px;
+    border-radius: 5px;
+}
+.chat-screen .messages .other-message > div {
+    margin-right: auto;
+    background: #b1fbeb;
+    padding: 10px;
+    border-radius: 5px;
+}
+.chat-screen .messages .update {
+    text-align: center;
+    font-size: 14px;
+    margin: 10px 0;
+    color: #888;
+}
+.chat-screen .typebox {
+    display: flex;
+    padding: 10px;
+    background: #eee;
+}
+.chat-screen .typebox input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    font-size: 15px;
+}
+.chat-screen .typebox button {
+    padding: 10px 20px;
+    background: #111;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    outline: none;
+}
+
+#delete-messages {
+    margin-left: 10px;
+    padding: 5px 10px;
+    border: 1px solid #eee;
+    background: #dc3545;
+    color: #fff;
+    font-size: 15px;
+    cursor: pointer;
+    outline: none;
+}
+
